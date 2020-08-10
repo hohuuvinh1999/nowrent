@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slick Playground</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    p.title_story,p.comment_story{
+      overflow: hidden;
+      text-overflow: clip;
+      white-space: nowrap;
+
+    }
+
+    .tag_box{-webkit-box-orient: vertical;
+      font-size: 1rem;
+      margin-bottom: 0;
+      display: -webkit-box;
+      max-height: 52px;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+
+    .background1{
+     background: #ff1743;
+   }
+   .background2{
+     background: #ffe8e8;
+   }
+   .color1{
+     color: #ff1743;
+   }
+   .color2{
+     color: #ffe8e8;
+   }
+   
+
+   ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #fff;
+  }
+  ::-webkit-scrollbar-track {
+
+    background-color: #fff;
+  }
+
+  @media screen and (min-width:575px){
+    .post_story_box{
+      padding-right: 20px !important;
+    }
+  }
+</style>
+
+</head>
+<body class="background1" onload="loadAddress()">
+  <div id="menu__mobile" style="position: fixed;width: 250px;height: 100vh;background: #fff;z-index: 999;margin-left: -250px;transition: 0.6s;">
+    <div id="menu__button--hide" class="background2 pl-2" style="position: absolute;width: 30px;height: 30px;margin-left: 233px;margin-top: calc(100vh - 55vh);border-radius: 50%;padding-top: 3px;display: none;">
+      <i class="fa fa-chevron-left color1" aria-hidden="true"></i>
+    </div>
+    <div class="p-3" style="display: flex;">
+      <div class="btn background1 mr-2 text-white">Đăng nhập</div>
+      <div class="btn background2 color1">Đăng ký</div>
+    </div>
+    <div class="pl-3 pr-3 mt-3">
+     <div class="btn background2 float-left mr-3" style="width: 47px;height: 40px;"><i class="fa fa-pencil-square color1" aria-hidden="true" style="font-size: 150%"></i></div>
+     <div class="pt-2">
+       <p class="font-weight-bold color1 mb-0">Bài đăng của tôi</p>
+     </div>
+     <div style="clear: both;"></div>
+   </div>
+
+   <div class="pl-3 pr-3 mt-3">
+    <div class="btn background2 float-left mr-3 pt-2" style="width: 47px;height: 40px;"><i class="fa fa-cogs color1" aria-hidden="true" style="font-size: 125%"></i></div>
+    <div class="pt-2">
+     <p class="font-weight-bold color1 mb-0">Cài đặt tài khoản</p>
+   </div>
+   <div style="clear: both;"></div>
+ </div>
+
+ <div class="pl-3 pr-3 mt-3">
+  <div class="btn background2 float-left mr-3 pt-2" style="width: 47px;height: 40px;"><i class="fa fa-bookmark color1" aria-hidden="true" style="font-size: 125%"></i></div>
+  <div class="pt-2">
+   <p class="font-weight-bold color1 mb-0">Bài thuê đã lưu</p>
+ </div>
+ <div style="clear: both;"></div>
+</div>
+
+<div class="pl-3 pr-3 mt-3">
+  <div class="btn background2 float-left mr-3 pt-2" style="width: 47px;height: 40px;"><i class="fa fa-shopping-basket color1" aria-hidden="true" style="font-size: 125%"></i></div>
+  <div class="pt-2">
+   <p class="font-weight-bold color1 mb-0">Tôi đang thuê</p>
+ </div>
+ <div style="clear: both;"></div>
+</div>
+</div>
+<style type="text/css">
+ .menu__mobile--show{
+  margin-left: 0px !important;
+  transition: 0.6s;
+}
+
+</style>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#menu__button').on('click',function(){
+      $('#menu__mobile').toggleClass('menu__mobile--show');
+      $('#menu__button--hide').show();
+    });
+
+    $('#menu__button--hide').on('click',function(){
+      $('#menu__mobile').removeClass('menu__mobile--show');
+      $('#menu__button--hide').hide();
+    });
+  });
+
+  
+</script>
+
+
+<div class="tool_book_box p-2 pl-3 pr-3 shadow-sm" style="width: 100%;height: 60px;position: fixed;margin-top: calc(100vh - 60px);z-index: 9999;background-image: url(img/icon/menu_bg_footer.svg);background-size: 100%;">
+  <div class="pt-2" style="width: 20%;float: left;">
+    <a href="index.html">
+      <div class="tool_function_love" style="width: 35px;height: 35px;border-radius: 8px;">
+       <i class="fa fa-home color1" aria-hidden="true" style="font-size: 210%"></i>
+     </div></a>
+   </div>
+   <div class="pt-2" style="width: 20%;float: left;">
+    <a href="index.html">
+      <div class="tool_function_love" style="width: 35px;height: 35px;border-radius: 8px;margin: auto">
+       <i class="fa fa-comments color1" aria-hidden="true" style="font-size: 210%"></i>
+     </div></a>
+   </div>  
+   <div class="pt-2" style="width: 20%;float: left;">
+    <a href="index.html">
+      <div class="tool_function_love background1" style="width: 50px;height: 50px;border-radius: 8px;margin: auto;border-radius: 50%;margin-top: -30px;padding-top: 12px;padding-left: 7px;">
+       <i class="fa fa-plus text-white " aria-hidden="true" style="font-size: 180%;margin-left: 6px;"></i>
+     </div></a>
+   </div>
+   <div class="pt-2" style="width: 20%;float: left;">
+    <a href="index.html">
+      <div class="tool_function_love " style="width: 35px;height: 35px;border-radius: 8px;margin: auto">
+       <i class="fa fa-home color1" aria-hidden="true" style="font-size: 210%"></i>
+     </div></a>
+   </div>
+   <div class="pt-2" style="width: 20%;float: left;">
+    <a href="index.html">
+      <div class="tool_function_love" style="width: 35px;height: 35px;border-radius: 8px;float: right;">
+       <i class="fa fa-home color1" aria-hidden="true" style="font-size: 210%"></i>
+     </div></a>
+   </div>
+ </div>
+ <!-- Top menu -->
+
+ <div class="container-fluid pt-3 pb-3 background1">
+  <div id="menu__button" class="menu_button" style="float: left;width: 50%">
+    <img src="img/icon/Group 2.svg">
+  </div>
+  <div class="menu_button" style="float: right;width: 50%">
+    <img class="float-right" src="img/icon/Group 3.svg">
+  </div>
+  <div style="clear: both"></div>
+
+  <div id="header__index" class="m-0 mt-4">
+    <p class="m-0 text-left" style="color: white;font-size: 120%;">Chào bạn!</p>
+    <p class="m-0 text-left " style="font-size: 140%; color:white">Bạn đang muốn thuê mặt hàng nào nè ?</p>
+  </div>
+  <div  class="m-0 mt-4">
+    <p id="header__catecorytext" class="m-0 text-left font-weight-bold" style="color: white;font-size: 130%;"></p>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){    
+    $('#header__index').hide();
+    $('#header__catecorytext').html("Tài khoản");
+  });
+  
+</script>
+
+
+
+
+<div id="login__box" class="container-fluid bg-white p-4" style="padding-top: 0.1px;border-top-left-radius: 20px;height:85vh;">
+ <p class="font-weight-bold text-center mt-4 mb-4" style="font-size: 150%">Đăng nhập</p>
+ <label class="font-weight-bold mt-3">Tên đăng nhập</label> 
+ <div class=" background2" style="width: 100%;height: 40px;border-radius: 10px;">
+  <div style="width: 100%;height: 100%;">
+    <input class="pl-2" type="text" name="" style="width: 100%;height: 100%;outline: none;background: none;border: none;"></div>      
+  </div>
+  <label class="mt-3 font-weight-bold">Mật khẩu</label> 
+  <div class="mb-3 background2" style="width: 100%;height: 40px;border-radius: 10px;">
+    <div style="width: calc(100% - 45px);;height: 100%;float: left;">
+      <input class="pl-2" type="text" name="" style="width: 100%;height: 100%;outline: none;background: none;border: none;"></div>
+      <div class="p-1" style="width: 45px;height: 100%;float: right;">
+        <div class="background1 hover_button" style="width: 100%;height: 100%;border-radius: 8px;padding-left: 10px;padding-top: 3px">
+          <i class=" fa fa-eye text-white" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <a href=""><p class="float-left mt-2 color1" style="font-size: 90%">Quên mật khẩu</p></a>
+    <div class="btn background1 float-right text-white">Đăng nhập</div>
+    <div style="clear: both;"></div>
+    <p id="statusLogin" class="text-center mt-4" style="font-size: 90%;color: red;"></p>
+    <p id="moveSignup" class="text-center mt-3" style="font-size: 90%">Bạn chưa có tài khoản, Đăng ký<strong class="color1 ml-1" style="text-decoration: none;">tại đây</strong> </p>
+</div>
+
+<div id="signup__box" class="container-fluid bg-white p-4" style="padding-top: 0.1px;border-top-left-radius: 20px;height:92vh;display: none;">
+ <p class="font-weight-bold text-center mt-2 mb-0" style="font-size: 150%">Đăng ký</p>
+ <label class="font-weight-bold mt-2">Tên đăng nhập</label> 
+ <div class=" background2" style="width: 100%;height: 40px;border-radius: 10px;">
+  <div style="width: 100%;height: 100%;">
+    <input class="pl-2" type="text" name="" style="width: 100%;height: 100%;outline: none;background: none;border: none;"></div>      
+  </div>
+
+  <label class="font-weight-bold mt-2 float-left">Địa chỉ email</label> 
+    <label class=" float-right color1 " style="font-size: 80%;margin-top: 7px;">Tên đăng nhập đã tồn tại</label>
+    <div style="clear: both;"></div>
+    <div class=" background2" style="width: 100%;height: 40px;border-radius: 10px;">
+    <div style="width: 100%;height: 100%;">
+    <input class="pl-2" type="text" name="" style="width: 100%;height: 100%;outline: none;background: none;border: none;"></div>      
+  </div>
+
+  <label class="mt-2 font-weight-bold">Mật khẩu</label> 
+  <div class="background2" style="width: 100%;height: 40px;border-radius: 10px;">
+    <div style="width: calc(100% - 45px);;height: 100%;float: left;">
+      <input class="pl-2" type="text" name="" style="width: 100%;height: 100%;outline: none;background: none;border: none;"></div>
+      <div class="p-1" style="width: 45px;height: 100%;float: right;">
+        <div class="background1 hover_button" style="width: 100%;height: 100%;border-radius: 8px;padding-left: 10px;padding-top: 3px">
+          <i class=" fa fa-eye text-white" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <label class="font-weight-bold mt-2 float-left">Nhập lại mật khẩu</label> 
+    <label class=" float-right color1 " style="font-size: 80%;margin-top: 7px;">Tên đăng nhập đã tồn tại</label>
+    <div style="clear: both;"></div>
+    <div class=" r-5 background2 mb-3" style="width: 100%;height: 40px;border-radius: 10px;">
+    <div style="width: calc(100% - 45px);;height: 100%;float: left;">
+    <input class="pl-2" type="text" name="" style="width: 100%;height: 100%;outline: none;background: none;border: none;"></div>
+    <div class="p-1" style="width: 45px;height: 100%;float: right;">
+      <div class="background1 hover_button" style="width: 100%;height: 100%;border-radius: 8px;padding-left: 10px;padding-top: 3px">
+        <i class=" fa fa-eye text-white" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+    <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1" style="font-size: 90%">Bằng việc đăng ký bạn đồng ý với <strong>Điều khoản dịch vụ</strong> của chúng tôi</label>
+  </div>
+  <div style="width: 100%;margin-top: -10px;">
+    <p id="statusLogin" class="text-center mb-0 float-left mt-1" style="font-size: 90%;color: red;width: 50%">Tên tài khoản đã tồn tại</p>
+
+    <div class="btn background1 float-right text-white">Đăng nhập</div>
+    <div style="clear: both;"></div>
+</div>
+    <p id="moveLogin" class="text-center mt-4" style="font-size: 90%">Bạn chưa có tài khoản, Đăng ký<strong class="color1 ml-1" style="text-decoration: none;">tại đây</strong>  </p>
+</div>
+
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    
+    $(document).ready(function(){
+      $('#moveLogin').on('click',function(){
+        $('#signup__box').hide();
+        $('#login__box').show();
+      });
+      $('#moveSignup').on('click',function(){
+        $('#signup__box').show();
+        $('#login__box').hide();
+      });
+    });
+  </script>
+</body>
+</html>
