@@ -75,7 +75,7 @@
 </style>
 
 </head>
-<body class="background1">
+<body class="background1" onload="loadAddress()">
   <div id="menu__mobile" style="position: fixed;width: 250px;height: 100vh;background: #fff;z-index: 999;margin-left: -250px;transition: 0.6s;">
     <div id="menu__button--hide" class="background2 pl-2" style="position: absolute;width: 30px;height: 30px;margin-left: 233px;margin-top: calc(100vh - 55vh);border-radius: 50%;padding-top: 3px;display: none;">
       <i class="fa fa-chevron-left color1" aria-hidden="true"></i>
@@ -201,15 +201,50 @@
   
 </script>
 
-<!-- ----Content----- -->
+<div id="selectAddressBox" style="width: 300px;height:calc(100vh - 120px);background: #fff;position: absolute;margin-left: -300px;transition: 0.6s">
+  <div id="address__button--hide" class="background2 pl-2" style="position: absolute;width: 30px;height: 30px;margin-left: 285px;margin-top: calc(100vh - 60vh);border-radius: 50%;padding-top: 3px;display: none;">
+      <i class="fa fa-chevron-left color1" aria-hidden="true"></i>
+    </div>
+  <div class="background2 pt-2" style="width: 100%;height: 45px;border-bottom: 3px solid #ff1743">
+    <p class="font-weight-bold color1 text-center" style="font-size: 110%">Chọn khu vực</p>
+  </div>
+  <div class="pt-1" data-spy="scroll" data-target="#myScrollspy" data-offset="10"
+                  style="height: calc(100vh - 220px);overflow-y: scroll;">
+  <div id="loadDataAddress">
+    
+  
+  </div>
+</div>
+</div>
+
+<style type="text/css">
+  .selectAddressBoxClick{
+    margin-left: 0px !important;
+    transition: 0.6s;
+  }
+</style>
 
 <div class="container-fluid bg-white" style="padding-top: 0.1px;border-top-left-radius: 20px;">
  <div class="row m-0 pt-3 pb-0">
    <p class="background2 color1 float-left font-weight-bold mr-2" style="padding: 4px 12px 4px 12px;border-radius: 8px;"><i class="fa fa-filter mr-2" aria-hidden="true"></i>Lọc</p>
-   <p class="background2 color1 float-left font-weight-bold mr-2" style="padding: 4px 12px 4px 12px;border-radius: 8px;"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i>Đà nẵng</p>
-   <p class="background2 color1 float-left font-weight-bold" style="padding: 4px 12px 4px 12px;border-radius: 8px;"><i class="fa fa-calendar mr-2" aria-hidden="true"></i>Tin mới nhất</p>
-   
+   <p id="selectAddress" class="background2 color1 float-left font-weight-bold mr-2" style="padding: 4px 12px 4px 12px;border-radius: 8px;"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i>Đà nẵng</p>
+   <p class="background2 color1 float-left font-weight-bold" style="padding: 4px 12px 4px 12px;border-radius: 8px;"><i class="fa fa-calendar mr-2" aria-hidden="true"></i>Tin mới nhất</p> 
  </div>
+ <script type="text/javascript">
+   $(document).ready(function(){
+              $('#selectAddress').on('click',function(){
+                $('#selectAddressBox').addClass('selectAddressBoxClick');
+                $('#address__button--hide').show();
+              });           
+            });
+
+   $('#address__button--hide').on('click',function(){
+      $('#selectAddressBox').removeClass('selectAddressBoxClick');
+      $('#address__button--hide').hide();
+    });
+
+
+ </script>
  <div class="row m-0">
   <div class="table-responsive">
     <div class="mb-1" style="width: 410px;">
@@ -299,8 +334,8 @@
 
 
       <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-
-
+      <script src="js/listAddress.js" type="text/javascript"></script>
+      <script src="js/addressPrinf.js" type="text/javascript"></script>
 
     </body>
     </html>
