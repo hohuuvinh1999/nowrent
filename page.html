@@ -54,7 +54,7 @@
    }
    
 
-  ::-webkit-scrollbar {
+   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
     background-color: #fff;
@@ -94,53 +94,53 @@
 
    <div class="pl-3 pr-3 mt-3">
     <div class="btn background2 float-left mr-3 pt-2" style="width: 47px;height: 40px;"><i class="fa fa-cogs color1" aria-hidden="true" style="font-size: 125%"></i></div>
-     <div class="pt-2">
-       <p class="font-weight-bold color1 mb-0">Cài đặt tài khoản</p>
-     </div>
-     <div style="clear: both;"></div>
+    <div class="pt-2">
+     <p class="font-weight-bold color1 mb-0">Cài đặt tài khoản</p>
    </div>
-
-   <div class="pl-3 pr-3 mt-3">
-    <div class="btn background2 float-left mr-3 pt-2" style="width: 47px;height: 40px;"><i class="fa fa-bookmark color1" aria-hidden="true" style="font-size: 125%"></i></div>
-     <div class="pt-2">
-       <p class="font-weight-bold color1 mb-0">Bài thuê đã lưu</p>
-     </div>
-     <div style="clear: both;"></div>
-   </div>
-
-   <div class="pl-3 pr-3 mt-3">
-    <div class="btn background2 float-left mr-3 pt-2" style="width: 47px;height: 40px;"><i class="fa fa-shopping-basket color1" aria-hidden="true" style="font-size: 125%"></i></div>
-     <div class="pt-2">
-       <p class="font-weight-bold color1 mb-0">Tôi đang thuê</p>
-     </div>
-     <div style="clear: both;"></div>
-   </div>
+   <div style="clear: both;"></div>
  </div>
- <style type="text/css">
-   .menu__mobile--show{
-    margin-left: 0px !important;
-    transition: 0.6s;
-   }
 
- </style>
+ <div class="pl-3 pr-3 mt-3">
+  <div class="btn background2 float-left mr-3 pt-2" style="width: 47px;height: 40px;"><i class="fa fa-bookmark color1" aria-hidden="true" style="font-size: 125%"></i></div>
+  <div class="pt-2">
+   <p class="font-weight-bold color1 mb-0">Bài thuê đã lưu</p>
+ </div>
+ <div style="clear: both;"></div>
+</div>
+
+<div class="pl-3 pr-3 mt-3">
+  <div class="btn background2 float-left mr-3 pt-2" style="width: 47px;height: 40px;"><i class="fa fa-shopping-basket color1" aria-hidden="true" style="font-size: 125%"></i></div>
+  <div class="pt-2">
+   <p class="font-weight-bold color1 mb-0">Tôi đang thuê</p>
+ </div>
+ <div style="clear: both;"></div>
+</div>
+</div>
+<style type="text/css">
+ .menu__mobile--show{
+  margin-left: 0px !important;
+  transition: 0.6s;
+}
+
+</style>
 <script type="text/javascript">
-            $(document).ready(function(){
-              $('#menu__button').on('click',function(){
-                $('#menu__mobile').toggleClass('menu__mobile--show');
-                 $('#menu__button--hide').show();
-              });
+  $(document).ready(function(){
+    $('#menu__button').on('click',function(){
+      $('#menu__mobile').toggleClass('menu__mobile--show');
+      $('#menu__button--hide').show();
+    });
 
-               $('#menu__button--hide').on('click',function(){
-                $('#menu__mobile').removeClass('menu__mobile--show');
-                $('#menu__button--hide').hide();
-              });
-            });
+    $('#menu__button--hide').on('click',function(){
+      $('#menu__mobile').removeClass('menu__mobile--show');
+      $('#menu__button--hide').hide();
+    });
+  });
 
-            
-          </script>
+  
+</script>
 
 
- <div class="tool_book_box p-2 pl-3 pr-3 shadow-sm" style="width: 100%;height: 60px;position: fixed;margin-top: calc(100vh - 60px);z-index: 9999;background-image: url(img/icon/menu_bg_footer.svg);background-size: 100%;">
+<div class="tool_book_box p-2 pl-3 pr-3 shadow-sm" style="width: 100%;height: 60px;position: fixed;margin-top: calc(100vh - 60px);z-index: 9999;background-image: url(img/icon/menu_bg_footer.svg);background-size: 100%;">
   <div class="pt-2" style="width: 20%;float: left;">
     <a href="index.html">
       <div class="tool_function_love" style="width: 35px;height: 35px;border-radius: 8px;">
@@ -153,28 +153,28 @@
        <i class="fa fa-comments color1" aria-hidden="true" style="font-size: 210%"></i>
      </div></a>
    </div>  
-  <div class="pt-2" style="width: 20%;float: left;">
+   <div class="pt-2" style="width: 20%;float: left;">
     <a href="index.html">
       <div class="tool_function_love background1" style="width: 50px;height: 50px;border-radius: 8px;margin: auto;border-radius: 50%;margin-top: -30px;padding-top: 12px;padding-left: 7px;">
        <i class="fa fa-plus text-white " aria-hidden="true" style="font-size: 180%;margin-left: 6px;"></i>
      </div></a>
    </div>
-  <div class="pt-2" style="width: 20%;float: left;">
+   <div class="pt-2" style="width: 20%;float: left;">
     <a href="index.html">
       <div class="tool_function_love " style="width: 35px;height: 35px;border-radius: 8px;margin: auto">
        <i class="fa fa-home color1" aria-hidden="true" style="font-size: 210%"></i>
      </div></a>
    </div>
-  <div class="pt-2" style="width: 20%;float: left;">
+   <div class="pt-2" style="width: 20%;float: left;">
     <a href="index.html">
       <div class="tool_function_love" style="width: 35px;height: 35px;border-radius: 8px;float: right;">
        <i class="fa fa-home color1" aria-hidden="true" style="font-size: 210%"></i>
      </div></a>
    </div>
-</div>
-<!-- Top menu -->
+ </div>
+ <!-- Top menu -->
 
-<div class="container-fluid pt-3 pb-3 background1">
+ <div class="container-fluid pt-3 pb-3 background1">
   <div id="menu__button" class="menu_button" style="float: left;width: 50%">
     <img src="img/icon/Group 2.svg">
   </div>
@@ -183,78 +183,69 @@
   </div>
   <div style="clear: both"></div>
 
-  <div class="m-0 mt-4">
+  <div id="header__index" class="m-0 mt-4">
     <p class="m-0 text-left" style="color: white;font-size: 120%;">Chào bạn!</p>
     <p class="m-0 text-left " style="font-size: 140%; color:white">Bạn đang muốn thuê mặt hàng nào nè ?</p>
   </div>
+  <div  class="m-0 mt-4">
+    <p id="header__catecorytext" class="m-0 text-left font-weight-bold" style="color: white;font-size: 130%;"></p>
+  </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    
+    $('#header__index').hide();
+    $('#header__catecorytext').html("Đồ điện tử");
+  });
+  
+</script>
 
 <!-- ----Content----- -->
 
 <div class="container-fluid bg-white" style="padding-top: 0.1px;border-top-left-radius: 20px;">
- <div class="row m-0 pt-3 pb-2">
-   <div class="col-4 pl-0 pr-2">
-     <div style="width: 100%;height: 130px;">
-       <img src="img/image_category/bds.jpg" width="100%" height="100%" style="border-radius: 10px">
-       <p class="font-weight-bold text-white" style="position: relative;margin-top: -28px;margin-left: 7px;font-size: 110%">Nhà ở</p>
+ <div class="row m-0 pt-3 pb-0">
+   <p class="background2 color1 float-left font-weight-bold mr-2" style="padding: 4px 12px 4px 12px;border-radius: 8px;"><i class="fa fa-filter mr-2" aria-hidden="true"></i>Lọc</p>
+   <p class="background2 color1 float-left font-weight-bold mr-2" style="padding: 4px 12px 4px 12px;border-radius: 8px;"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i>Đà nẵng</p>
+   <p class="background2 color1 float-left font-weight-bold" style="padding: 4px 12px 4px 12px;border-radius: 8px;"><i class="fa fa-calendar mr-2" aria-hidden="true"></i>Tin mới nhất</p>
+   
+ </div>
+ <div class="row m-0">
+  <div class="table-responsive">
+    <div class="mb-1" style="width: 410px;">
+     <div class="btn background2 float-left mr-2 pt-2" style="width: 60px;height: 60px;border-radius: 12px;">
+       <img src="img/icon/category--car.png" width="120%" height="100%" style="margin-left: -3px;">
      </div>
-   </div>
-   <div class="col-4 pl-1 pr-1">
-     <div style="width: 100%;height: 130px;">
-       <img src="img/image_category/car.jpg" width="100%" height="100%" style="border-radius: 10px">
-       <p class="font-weight-bold text-white" style="position: relative;margin-top: -28px;margin-left: 7px;font-size: 110%">Xe cộ</p>
+     <div class="btn background2 float-left mr-2 pt-2" style="width: 60px;height: 60px;border-radius: 12px;">
+       <img src="img/icon/category--moto.png" width="120%" height="100%" style="margin-left: -3px;">
      </div>
-   </div>
-   <div class="col-4 pl-2 pr-0">
-     <div style="width: 100%;height: 130px;">
-       <img src="img/image_category/phone.jpg" width="100%" height="100%" style="border-radius: 10px">
-       <p class="font-weight-bold text-white" style="position: relative;margin-top: -28px;margin-left: 7px;font-size: 110%">Đồ điện tử</p>
+     <div class="btn background2 float-left mr-2 pt-2" style="width: 60px;height: 60px;border-radius: 12px;">
+       <img src="img/icon/category--truck.png" width="120%" height="100%" style="margin-left: -3px;">
      </div>
-   </div>
-   <div class="col-4 pl-0 pr-2 mt-2">
-     <div style="width: 100%;height: 130px;">
-       <img src="img/image_category/work.jpg" width="100%" height="100%" style="border-radius: 10px">
-       <p class="font-weight-bold text-white" style="position: relative;margin-top: -28px;margin-left: 7px;font-size: 110%">Công việc</p>
+     <div class="btn background2 float-left mr-2 pt-2" style="width: 60px;height: 60px;border-radius: 12px;">
+       <img src="img/icon/category--bikeelectron.png" width="120%" height="100%" style="margin-left: -3px;">
      </div>
-   </div>
-   <div class="col-4 pl-1 pr-1 mt-2">
-     <div style="width: 100%;height: 130px;">
-       <img src="img/image_category/pet.jpg" width="100%" height="100%" style="border-radius: 10px">
-       <p class="font-weight-bold text-white" style="position: relative;margin-top: -28px;margin-left: 7px;font-size: 110%">Vật nuôi</p>
+     <div class="btn background2 float-left mr-2 pt-2" style="width: 60px;height: 60px;border-radius: 12px;">
+       <img src="img/icon/category--bike.png" width="120%" height="100%" style="margin-left: -3px;">
      </div>
-   </div>
-   <div class="col-4 pl-2 pr-0 mt-2">
-     <div style="width: 100%;height: 130px;">
-       <img src="img/image_category/noithat.jpg" width="100%" height="100%" style="border-radius: 10px">
-       <p class="font-weight-bold text-white" style="position: relative;margin-top: -28px;margin-left: 7px;font-size: 105%">Đồ gia dụng</p>
-     </div>
-   </div>
-   <div class="col-4  pl-0 pr-2 mt-2">
-     <div style="width: 100%;height: 130px;">
-       <img src="img/image_category/wearing.jpg" width="100%" height="100%" style="border-radius: 10px">
-       <p class="font-weight-bold text-white" style="position: relative;margin-top: -28px;margin-left: 7px;font-size: 110%">Thời trang</p>
-     </div>
-   </div>
-   <div class="col-4 pl-1 pr-1 mt-2">
-     <div style="width: 100%;height: 130px;">
-       <img src="img/image_category/gym.jpg" width="100%" height="100%" style="border-radius: 10px">
-       <p class="font-weight-bold text-white" style="position: relative;margin-top: -28px;margin-left: 7px;font-size: 110%">Thể thao</p>
-     </div>
-   </div>
-   <div class="col-4 pl-2 pr-0 mt-2">
-     <div style="width: 100%;height: 130px;">
-       <img src="img/image_category/tour.jpg" width="100%" height="100%" style="border-radius: 10px">
-       <p class="font-weight-bold text-white" style="position: relative;margin-top: -28px;margin-left: 7px;font-size: 105%">Du lịch</p>
+     <div class="btn background2 float-left mr-2 pt-2" style="width: 60px;height: 60px;border-radius: 12px;">
+       <img src="img/icon/category--crane.png" width="120%" height="100%" style="margin-left: -3px;">
      </div>
    </div>
  </div>
+</div>
 
- 
-
-
- <div class="m-0">
-  <p class="m-0 text-left font-weight-bold float-left" style="font-size: 110%">Cho thuê mới</p>
-  <a href=""> <p class="m-0 text-left float-right" style="color: black">Xem tất cả</p></a>
+<div class="mt-2">
+  <div class="float-left" style="width: 33%;border-bottom: 3px solid #ff1743">
+    <p class="mb-1">Tất cả</p>
+  </div>
+  <div class="float-left" style="width: 33%;">
+    <p class="text-center mb-2">Cá nhân</p>
+  </div>
+  <div class="float-left" style="width: 33%;">
+    <p class="float-right mb-2">Thuê chuyên</p>
+  </div>
+  <div style="clear: both;"></div>
 </div> 
 
 <div style="clear: both;"></div>
@@ -303,15 +294,6 @@
           </script>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
 
 
 
